@@ -1,3 +1,7 @@
+/* eslint-disable no-bitwise */
+/* eslint-disable no-lone-blocks */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable react/prop-types */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
@@ -12,7 +16,7 @@ const videoConstraints = {
   facingMode: "user",
 };
 
-export default function Camera() {
+export default function Camera({ whenClick, photo }) {
   const webcamRef = React.useRef(null);
   const [picture, setPicture] = React.useState(null);
 
@@ -21,6 +25,14 @@ export default function Camera() {
     setPicture(imageSrc);
   }, [webcamRef]);
 
+  const clickHandler = () => {
+    capture();
+    whenClick(() => true);
+  };
+
+  {
+    (picture !== null) & photo(picture);
+  }
   return (
     <div className="webcam">
       <Webcam
@@ -33,7 +45,7 @@ export default function Camera() {
         videoConstraints={videoConstraints}
       />
       <div className="buttons">
-        <button className="camera-button" type="button" onClick={capture}>
+        <button className="camera-button" type="button" onClick={clickHandler}>
           <BsCameraFill className="camera-icon" />
         </button>
         <button
