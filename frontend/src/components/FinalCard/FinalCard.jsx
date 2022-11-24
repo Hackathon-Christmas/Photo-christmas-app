@@ -6,11 +6,11 @@ import "./FinalCard.css";
 function FinalCard(props) {
   return (
     <div
-      className="card"
+      className="final-card"
       style={{ backgroundImage: `url(${props.obj.background})` }}
     >
-      <div className="icon-wrap">
-        <img src={props.obj.photo} alt="charactar" />
+      <div>
+        <img className="final-img" src={props.obj.photo} alt="charactar" />
       </div>
       <div className="icon-wrap">{props.obj.text}</div>
     </div>

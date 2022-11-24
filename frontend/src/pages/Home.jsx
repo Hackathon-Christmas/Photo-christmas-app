@@ -28,13 +28,16 @@ export default function Home() {
         <MessageSection text={setTextValue} />
       </div>
       {isCompleted && (
-        <FinalCard
-          obj={{
-            background: chooseBackground,
-            photo: photoValue,
-            text: textValue,
-          }}
-        />
+        <div className="final-result">
+          <h2>Your Card is ready</h2>
+          <FinalCard
+            obj={{
+              background: chooseBackground,
+              photo: photoValue,
+              text: textValue,
+            }}
+          />
+        </div>
       )}
     </div>
   );
