@@ -1,7 +1,8 @@
 /* eslint-disable no-shadow */
 import "./Home.css";
 import "../components/CardTimer/CardTimer.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import christmas from "../assets/images/DrawKit Vector Illustration Christmas & Thanksgiving (3).svg";
 
 function Home() {
   const [days, setDays] = useState(10);
@@ -40,13 +41,23 @@ function Home() {
     setInterval(countdown, 1000);
   }, []);
 
+  // Scroll to element effect
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="app">
-      <div className="img" />
+      {/* <div className="img" /> */}
       <div className="Cont-stars">
         <div className="stars" />
       </div>
       <section className="container-background">
+        <div className="christmas-img">
+          <img src={christmas} alt="christmas" />
+        </div>
         <div className="titulo">
           <p>Christmas Countdown Timer</p>
         </div>
@@ -67,6 +78,11 @@ function Home() {
             <p>{seconds}</p>
             <h3 className="text">Seconds</h3>
           </div>
+        </div>
+        <div className="button">
+          <button onClick={handleClick} type="button">
+            Scroll to element &#8595;
+          </button>
         </div>
       </section>
     </div>
