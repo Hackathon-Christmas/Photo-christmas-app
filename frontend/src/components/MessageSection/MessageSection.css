@@ -8,6 +8,10 @@
 
 .text-area {
   margin: 4rem;
-  width: 50%;
+  width: 70%;
   height: 100px;
+  resize: none;
+  font-size: 1.2rem;
+  overflow: scroll;
+  border-radius: 5px;
 }

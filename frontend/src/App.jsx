@@ -1,5 +1,4 @@
 import Feature from "./pages/Feature";
-
 import "./App.css";
 
 function App() {

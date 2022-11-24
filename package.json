@@ -21,13 +21,12 @@
   },
   "dependencies": {
     "expo-camera": "^13.1.0",
-    "primeicons": "^6.0.1",
     "react-component-export-image": "^1.0.6",
     "react-icons": "^4.6.0",
     "react-webcam": "^7.0.1",
     "react-snowfall": "^1.2.1",
     "react-snowflakes": "^1.0.0",
-    "primeicons": "^6.0.1"
+    "primeros": "^6.0.1"
 
   }
 }
