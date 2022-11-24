@@ -17,7 +17,7 @@ const videoConstraints = {
   facingMode: "user",
 };
 
-export default function Camera({ whenClick, photo, text, reset }) {
+export default function Camera({ whenClick, photo, text, textValue, reset }) {
   const webcamRef = React.useRef(null);
   const [picture, setPicture] = React.useState(null);
 
@@ -42,9 +42,8 @@ export default function Camera({ whenClick, photo, text, reset }) {
           audio={false}
           mirrored
           screenshotFormat="image/jpeg"
-          height={400}
-          width={600}
           videoConstraints={videoConstraints}
+          className="video-webcam"
         />
         <div className="buttons">
           <button
@@ -63,7 +62,7 @@ export default function Camera({ whenClick, photo, text, reset }) {
           </button>
         </div>
         <div>
-          <MessageSection reset={reset} text={text} />
+          <MessageSection reset={reset} text={text} textValue={textValue} />
         </div>
       </div>
     </div>

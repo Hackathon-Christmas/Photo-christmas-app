@@ -9,7 +9,13 @@
 .card {
   text-align: center;
   padding: 10px;
-  margin: 5px;
+  margin: 10px;
   background-size: cover;
   height: 150px;
+}
+
+@media screen and (max-width: 750px) {
+  .icon-wrap {
+    margin: 20px 5px;
+  }
 }
