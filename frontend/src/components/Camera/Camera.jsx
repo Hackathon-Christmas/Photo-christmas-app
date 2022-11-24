@@ -17,7 +17,7 @@ const videoConstraints = {
   facingMode: "user",
 };
 
-export default function Camera({ whenClick, photo, text }) {
+export default function Camera({ whenClick, photo, text, reset }) {
   const webcamRef = React.useRef(null);
   const [picture, setPicture] = React.useState(null);
 
@@ -63,7 +63,7 @@ export default function Camera({ whenClick, photo, text }) {
           </button>
         </div>
         <div>
-          <MessageSection text={text} />
+          <MessageSection reset={reset} text={text} />
         </div>
       </div>
     </div>
