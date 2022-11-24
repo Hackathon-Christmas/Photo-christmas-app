@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable import/order */
 /* eslint-disable import/no-extraneous-dependencies */
 import { useState } from "react";
@@ -9,6 +10,7 @@ import "primeicons/primeicons.css";
 import MessageSection from "../components/MessageSection/MessageSection";
 import Snowfall from "react-snowfall";
 import FinalCard from "../components/FinalCard/FinalCard";
+import MyComponent from "../components/Print";
 
 export default function Home() {
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
@@ -30,7 +32,7 @@ export default function Home() {
       {isCompleted && (
         <div className="final-result">
           <h2>Your Card is ready</h2>
-          <FinalCard
+          <MyComponent
             obj={{
               background: chooseBackground,
               photo: photoValue,
