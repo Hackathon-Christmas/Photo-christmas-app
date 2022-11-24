@@ -30,9 +30,11 @@ export default function Feature() {
           photo={setphotoValue}
           whenClick={setIsCompleted}
           text={setTextValue}
+          reset={setIsCompleted}
         />
       </div>
-      {isCompleted && (
+      {textValue === null && <div>Fill the Message First!!</div>}
+      {isCompleted && textValue !== null && (
         <div className="final-result">
           <h2>Your Card is ready</h2>
           <Print
