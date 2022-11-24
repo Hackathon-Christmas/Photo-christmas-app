@@ -1,0 +1,27 @@
+.webcam {
+  margin-top: 2rem;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-button {
+  margin-right: 2rem;
+}
+
+.refresh-button,
+.camera-button {
+  background-color: transparent;
+  border: none;
+}
+
+.camera-icon,
+.refresh-icon {
+  width: 50px;
+  height: auto;
+  color: #4fed9a;
+}
