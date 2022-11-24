@@ -1,0 +1,6 @@
+.cards-library {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px dashed green;
+}
