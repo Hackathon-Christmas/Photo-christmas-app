@@ -1,5 +1,5 @@
-import Feature from "./pages/Feature";
 import Home from "./pages/Home";
+import Feature from "./pages/Feature";
 
 import "./App.css";
 

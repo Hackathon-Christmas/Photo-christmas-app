@@ -17,7 +17,7 @@ export default function Feature() {
   const [isCompleted, setIsCompleted] = useState(null);
   return (
     <div>
-      <Snowfall />
+      <Snowfall style={{ height: "200vh" }} />
       <div className="app-left-side">
         <MoreCardButton whenClicked={setIsLibraryOpen} />
         {isLibraryOpen && (
@@ -33,7 +33,9 @@ export default function Feature() {
           reset={setIsCompleted}
         />
       </div>
-      {textValue === null && <div>Fill the Message First!!</div>}
+      {textValue === null && (
+        <h3 className="instructions">Fill the Message First!!</h3>
+      )}
       {isCompleted && textValue !== null && (
         <div className="final-result">
           <h2>Your Card is ready</h2>

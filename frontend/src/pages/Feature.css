@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.page {
+  background-color: black;
+}
+
 .final-result {
   width: 50%;
   padding: 20px;
@@ -10,4 +14,9 @@
   top: 152%;
   left: 25%;
   background-color: rgb(96, 21, 17);
+}
+
+.instructions {
+  color: white;
+  padding: 50px;
 }
