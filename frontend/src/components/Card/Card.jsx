@@ -7,7 +7,7 @@ function Card(props) {
   return (
     <div
       className="card"
-      style={{ backgroundImage: `url(${props.background})` }}
+      style={{ backgroundImage: `url(/src/assets/${props.background}.jpg)` }}
     >
       <div className="icon-wrap">
         <i className="pi pi-camera" />
