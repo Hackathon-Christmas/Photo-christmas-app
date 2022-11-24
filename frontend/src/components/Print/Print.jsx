@@ -14,7 +14,7 @@ const ComponentToPrint = React.forwardRef((props, ref) => (
   <div
     ref={ref}
     className="final-card"
-    style={{ backgroundImage: `url(${props.obj.background})` }}
+    style={{ backgroundImage: `url(/src/assets/${props.obj.background}.jpg)` }}
   >
     <div>
       <img className="final-img" src={props.obj.photo} alt="charactar" />
