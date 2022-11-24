@@ -6,7 +6,6 @@ import "./App.css";
 import MoreCardButton from "../components/MoreCardButton/MoreCardButton";
 import CardsLibrary from "../components/CardsLibrary/CardsLibrary";
 import "primeicons/primeicons.css";
-import MessageSection from "../components/MessageSection/MessageSection";
 import Snowfall from "react-snowfall";
 import FinalCard from "../components/FinalCard/FinalCard";
 
@@ -21,11 +20,17 @@ export default function Home() {
       <Snowfall />
       <div className="app-left-side">
         <MoreCardButton whenClicked={setIsLibraryOpen} />
-        {isLibraryOpen && <CardsLibrary choose={setChooeseBackground} />}
-      </div>
-      <div className="app-right-side">
-        <Camera photo={setphotoValue} whenClick={setIsCompleted} />
-        <MessageSection text={setTextValue} />
+        {isLibraryOpen && (
+          <CardsLibrary
+            choose={setChooeseBackground}
+            choosedBackground={chooseBackground}
+          />
+        )}
+        <Camera
+          photo={setphotoValue}
+          whenClick={setIsCompleted}
+          text={setTextValue}
+        />
       </div>
       {isCompleted && (
         <FinalCard

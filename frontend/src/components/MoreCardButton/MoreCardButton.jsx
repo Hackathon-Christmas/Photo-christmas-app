@@ -2,10 +2,14 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./MoreCardButton.css";
+import "primeicons/primeicons.css";
 
 function MoreCardButton({ whenClicked }) {
   return (
-    <button onClick={() => whenClicked((prevState) => !prevState)}>
+    <button
+      className="card-backgrounds"
+      onClick={() => whenClicked((prevState) => !prevState)}
+    >
       <i className="pi pi-list" />
     </button>
   );

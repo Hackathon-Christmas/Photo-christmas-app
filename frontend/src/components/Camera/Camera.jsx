@@ -8,6 +8,7 @@ import React from "react";
 import Webcam from "react-webcam";
 import { BsCameraFill } from "react-icons/bs";
 import { BiRefresh } from "react-icons/bi";
+import MessageSection from "../MessageSection/MessageSection";
 import "./Camera.css";
 
 const videoConstraints = {
@@ -16,7 +17,7 @@ const videoConstraints = {
   facingMode: "user",
 };
 
-export default function Camera({ whenClick, photo }) {
+export default function Camera({ whenClick, photo, text }) {
   const webcamRef = React.useRef(null);
   const [picture, setPicture] = React.useState(null);
 
@@ -34,34 +35,37 @@ export default function Camera({ whenClick, photo }) {
     (picture !== null) & photo(picture);
   }
   return (
-    <div className="webcam">
-      <Webcam
-        ref={webcamRef}
-        audio={false}
-        mirrored
-        screenshotFormat="image/jpeg"
-        height={400}
-        width={600}
-        videoConstraints={videoConstraints}
-      />
-      <div className="buttons">
-        <button className="camera-button" type="button" onClick={clickHandler}>
-          <BsCameraFill className="camera-icon" />
-        </button>
-        <button
-          className="refresh-button"
-          type="button"
-          onClick={() => setPicture(null)}
-        >
-          <BiRefresh className="refresh-icon" />
-        </button>
-      </div>
-
-      {picture && (
-        <div>
-          <img src={picture} alt="Screenchot" />
+    <div className="webcam-container">
+      <div className="webcam">
+        <Webcam
+          ref={webcamRef}
+          audio={false}
+          mirrored
+          screenshotFormat="image/jpeg"
+          height={400}
+          width={600}
+          videoConstraints={videoConstraints}
+        />
+        <div className="buttons">
+          <button
+            className="camera-button"
+            type="button"
+            onClick={clickHandler}
+          >
+            <BsCameraFill className="camera-icon" />
+          </button>
+          <button
+            className="refresh-button"
+            type="button"
+            onClick={() => setPicture(null)}
+          >
+            <BiRefresh className="refresh-icon" />
+          </button>
         </div>
-      )}
+        <div>
+          <MessageSection text={text} />
+        </div>
+      </div>
     </div>
   );
 }

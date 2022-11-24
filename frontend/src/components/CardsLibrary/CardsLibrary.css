@@ -1,6 +1,11 @@
 .cards-library {
   width: 500px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   border: 1px dashed green;
+}
+
+.chosed-background {
+  background-color: blue;
 }

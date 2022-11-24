@@ -1,3 +1,10 @@
+.card-backgrounds {
+  display: block;
+  border-style: none;
+  background-color: transparent;
+  align-self: flex-start;
+}
+
 .pi-list {
   font-size: 4rem;
 }

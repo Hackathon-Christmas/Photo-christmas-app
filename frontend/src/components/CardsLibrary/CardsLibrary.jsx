@@ -5,7 +5,7 @@ import React from "react";
 import Card from "../Card/Card";
 import "./CardsLibrary.css";
 
-function CardsLibrary({ choose }) {
+function CardsLibrary({ choose, choosedBackground }) {
   const backgroundsArr = [
     "https://img.freepik.com/premium-photo/christmas-greeting-card-happy-new-year-christmas-ornaments-red-background-merry-christmas-card-space-text_138888-1006.jpg",
     "https://torange.biz/photofxnew/137/HD/red-christmas-card-background-137566.jpg",
@@ -20,7 +20,14 @@ function CardsLibrary({ choose }) {
     <div className="cards-library">
       {backgroundsArr.map((background, index) => {
         return (
-          <div onClick={() => choose(background)}>
+          <div
+            className={
+              choosedBackground === background
+                ? "chosed-background"
+                : "not-chosed"
+            }
+            onClick={() => choose(background)}
+          >
             {" "}
             <Card id={index} background={background} />
           </div>

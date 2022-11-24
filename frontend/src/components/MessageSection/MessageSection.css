@@ -1,4 +1,13 @@
 .section-wrap {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-area {
+  margin: 4rem;
+  width: 50%;
+  height: 100px;
 }
