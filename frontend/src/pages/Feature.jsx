@@ -17,7 +17,7 @@ export default function Feature() {
   const [isCompleted, setIsCompleted] = useState(null);
   return (
     <div className="feature-bg">
-      <Snowfall style={{ height: "200vh" }} />
+      <Snowfall style={{ height: "250vh" }} />
       <div className="app-left-side">
         <MoreCardButton whenClicked={setIsLibraryOpen} />
         {isLibraryOpen && (
