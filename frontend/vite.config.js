@@ -19,5 +19,8 @@ export default defineConfig({
         "react-snowfall","react-webcam","react-icons/bs","react-icons/bi","react-component-export-image"
       ],
     },
-  }
+  },
+  optimizeDeps: {
+    inlcude: ["react-snowfall", "react-webcam",,"react-icons/bs","react-icons/bi","react-component-export-image"],
+  },
 });
