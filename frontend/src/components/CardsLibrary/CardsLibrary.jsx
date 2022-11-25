@@ -5,7 +5,7 @@ import React from "react";
 import Card from "../Card/Card";
 import "./CardsLibrary.css";
 
-function CardsLibrary({ choose, choosedBackground }) {
+function CardsLibrary({ choose, choosedBackground, selected }) {
   const backgroundsArr = [1, 2, 3, 4, 5, 6];
 
   return (
@@ -21,7 +21,7 @@ function CardsLibrary({ choose, choosedBackground }) {
             onClick={() => choose(background)}
           >
             {" "}
-            <Card id={index + 1} background={background} />
+            <Card id={index + 1} background={background} selected={selected} />
           </div>
         );
       })}
