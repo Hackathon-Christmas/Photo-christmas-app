@@ -17,6 +17,7 @@
 @media screen and (max-width: 750px) {
   .cards-library {
     margin-top: 1rem;
-    width: 200px;
+    width: 185px;
+    flex-direction: row;
   }
 }

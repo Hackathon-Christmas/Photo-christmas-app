@@ -18,4 +18,8 @@
   .icon-wrap {
     margin: 20px 5px;
   }
+
+  .card {
+    width: 70px;
+  }
 }
