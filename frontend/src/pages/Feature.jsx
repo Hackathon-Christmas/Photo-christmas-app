@@ -37,7 +37,7 @@ export default function Feature() {
 
   return (
     <div className="feature-bg">
-      <Snowfall style={{ height: "310vh" }} />
+      <Snowfall style={{ height: "290vh" }} />
       <div className="app-left-side" onClick={() => removeResults()}>
         <div className="more-cards-container">
           <MoreCardButton whenClicked={setIsLibraryOpen} />
