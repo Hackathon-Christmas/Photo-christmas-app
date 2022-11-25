@@ -15,7 +15,7 @@ export default defineConfig({
   },
    build: {
     rollupOptions: {
-      internal: [
+      external: [
         "react-snowfall","react-webcam","react-icons/bs","react-icons/bi","react-component-export-image"
       ],
     },
