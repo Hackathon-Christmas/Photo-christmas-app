@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable import/order */
 /* eslint-disable import/no-extraneous-dependencies */
 import { useState } from "react";
@@ -9,24 +10,32 @@ import "primeicons/primeicons.css";
 import Snowfall from "react-snowfall";
 import Print from "../components/Print/Print";
 
-export default function Feature() {
+export default function Feature({ remove, isCompleted, setIsCompleted }) {
   const [isLibraryOpen, setIsLibraryOpen] = useState(false);
   const [textValue, setTextValue] = useState(null);
   const [photoValue, setphotoValue] = useState(null);
   const [chooseBackground, setChooeseBackground] = useState(null);
+
   const [isCompleted, setIsCompleted] = useState(null);
+=======
+
 
   return (
     <div className="feature-bg">
       <Snowfall style={{ height: "250vh" }} />
       <div className="app-left-side">
-        <MoreCardButton whenClicked={setIsLibraryOpen} />
-        {isLibraryOpen && (
-          <CardsLibrary
-            choose={setChooeseBackground}
-            choosedBackground={chooseBackground}
-          />
-        )}
+        <div>
+          <MoreCardButton whenClicked={setIsLibraryOpen} />
+          {isLibraryOpen && (
+            <div className="cards-arsenal-wrap">
+              <CardsLibrary
+                selected={setIsLibraryOpen}
+                choose={setChooeseBackground}
+                choosedBackground={chooseBackground}
+              />
+            </div>
+          )}
+        </div>
         <Camera
           photo={setphotoValue}
           whenClick={setIsCompleted}
@@ -35,7 +44,7 @@ export default function Feature() {
           reset={setIsCompleted}
         />
       </div>
-      {isCompleted && textValue !== null && (
+      {!remove && isCompleted && textValue !== null && (
         <div className="final-result">
           <h2 className="card-ready">Your card is ready🎄</h2>
           <Print
