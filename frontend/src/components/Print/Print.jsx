@@ -32,7 +32,9 @@ function Print({ obj }) {
       <ComponentToPrint obj={obj} ref={componentRef} />
       <button
         className="export-button"
-        onClick={() => exportComponentAsJPEG(componentRef)}
+        onClick={() => {
+          exportComponentAsJPEG(componentRef);
+        }}
       >
         Export as JPEG
         <img className="christmas-hat" src={Hat} alt="christmas-hat" />
@@ -46,7 +48,9 @@ function Print({ obj }) {
       </button> */}
       <button
         className="export-button"
-        onClick={() => exportComponentAsPNG(componentRef)}
+        onClick={() => {
+          exportComponentAsPNG(componentRef);
+        }}
       >
         Export as PNG
         <img className="christmas-hat" src={Hat} alt="christmas-hat" />
