@@ -10,6 +10,7 @@ import { BsCameraFill } from "react-icons/bs";
 import { BiRefresh } from "react-icons/bi";
 import MessageSection from "../MessageSection/MessageSection";
 import "./Camera.css";
+import gift from "../../assets/images/DrawKit Vector Illustration Christmas & Thanksgiving (1).svg";
 
 const videoConstraints = {
   width: 600,
@@ -36,6 +37,12 @@ export default function Camera({ whenClick, photo, text, textValue, reset }) {
   }
   return (
     <div className="webcam-container">
+      <div className="webcam-intro">
+        <h3 className="webcam-title">
+          &#x2190; Choose your Card template in the menu !
+        </h3>
+        <img src={gift} alt="gift" className="christmas-gift" />
+      </div>
       <div className="webcam">
         <Webcam
           ref={webcamRef}

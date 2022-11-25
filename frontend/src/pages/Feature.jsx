@@ -16,6 +16,10 @@ export default function Feature({ remove, isCompleted, setIsCompleted }) {
   const [photoValue, setphotoValue] = useState(null);
   const [chooseBackground, setChooeseBackground] = useState(null);
 
+  const [isCompleted, setIsCompleted] = useState(null);
+=======
+
+
   return (
     <div className="feature-bg">
       <Snowfall style={{ height: "250vh" }} />
