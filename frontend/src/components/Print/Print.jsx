@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/prop-types */
 /* eslint-disable import/no-extraneous-dependencies */
@@ -36,13 +37,13 @@ function Print({ obj }) {
         Export as JPEG
         <img className="christmas-hat" src={Hat} alt="christmas-hat" />
       </button>
-      <button
+      {/* <button
         className="export-button"
         onClick={() => exportComponentAsPDF(componentRef)}
       >
         Export as PDF
         <img className="christmas-hat" src={Hat} alt="christmas-hat" />
-      </button>
+      </button> */}
       <button
         className="export-button"
         onClick={() => exportComponentAsPNG(componentRef)}
