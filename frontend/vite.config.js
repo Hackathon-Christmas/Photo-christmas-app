@@ -16,11 +16,11 @@ export default defineConfig({
    build: {
     rollupOptions: {
       external: [
-        "react-snowfall","react-webcam","react-icons/bs","react-icons/bi"
+        "react-snowfall","react-webcam","react-icons/bs","react-icons/bi","react-component-export-image"
       ],
     },
   },
   optimizeDeps: {
-    exclude: ["react-snowfall", "react-webcam",,"react-icons/bs","react-icons/bi"],
+    exclude: ["react-snowfall", "react-webcam",,"react-icons/bs","react-icons/bi","react-component-export-image"],
   },
 });
