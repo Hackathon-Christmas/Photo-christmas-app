@@ -52,3 +52,24 @@
     width: 40px;
   }
 }
+
+.webcam-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.webcam-title {
+  color: var(--Soft_red);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.christmas-gift {
+  width: 300px;
+  height: auto;
+}
