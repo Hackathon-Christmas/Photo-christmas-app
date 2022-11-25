@@ -13,4 +13,14 @@ export default defineConfig({
       "@services": path.resolve(__dirname, "src/services"),
     },
   },
+   build: {
+    rollupOptions: {
+      external: [
+        "react-snowfall"
+      ],
+    },
+  },
+  optimizeDeps: {
+    exclude: ["react-snowfall"],
+  },
 });
