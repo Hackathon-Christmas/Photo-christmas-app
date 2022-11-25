@@ -73,3 +73,13 @@
   width: 300px;
   height: auto;
 }
+
+@media screen and (max-width: 750px) {
+  .webcam-title {
+    font-size: 1.4rem;
+  }
+
+  .christmas-gift {
+    width: 200px;
+  }
+}
