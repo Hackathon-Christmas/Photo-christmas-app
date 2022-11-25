@@ -15,3 +15,24 @@
   overflow: scroll;
   border-radius: 5px;
 }
+
+.instructions {
+  color: var(--Soft_red);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+
+@media screen and (max-width: 750px) {
+  .instructions {
+    font-size: 1rem;
+  }
+
+  .text-area {
+    width: 80%;
+    height: 100px;
+    font-size: 0.8rem;
+  }
+}

@@ -2,7 +2,7 @@
 import React from "react";
 import "./MessageSection.css";
 
-function MessageSection({ text, reset }) {
+function MessageSection({ text, reset, textValue }) {
   return (
     <div className="section-wrap">
       <textarea
@@ -12,6 +12,9 @@ function MessageSection({ text, reset }) {
           text(e.target.value);
         }}
       />
+      {textValue === null && (
+        <h3 className="instructions">Fill the Message First!!</h3>
+      )}
     </div>
   );
 }
