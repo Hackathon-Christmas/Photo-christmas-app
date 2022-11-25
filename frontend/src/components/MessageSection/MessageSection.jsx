@@ -5,6 +5,9 @@ import "./MessageSection.css";
 function MessageSection({ text, reset, textValue }) {
   return (
     <div className="section-wrap">
+      {textValue === null && (
+        <h3 className="instructions">Fill the Message First!!</h3>
+      )}
       <textarea
         className="text-area"
         onChange={(e) => {
@@ -12,9 +15,6 @@ function MessageSection({ text, reset, textValue }) {
           text(e.target.value);
         }}
       />
-      {textValue === null && (
-        <h3 className="instructions">Fill the Message First!!</h3>
-      )}
     </div>
   );
 }

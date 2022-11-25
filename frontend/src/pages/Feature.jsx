@@ -18,7 +18,7 @@ export default function Feature({ remove, isCompleted, setIsCompleted }) {
 
   return (
     <div className="feature-bg">
-      <Snowfall style={{ height: "250vh" }} />
+      <Snowfall style={{ height: "260vh" }} />
       <div className="app-left-side">
         <div>
           <MoreCardButton whenClicked={setIsLibraryOpen} />

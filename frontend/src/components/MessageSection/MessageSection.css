@@ -22,7 +22,8 @@
   text-transform: uppercase;
   text-decoration: none;
   font-size: 1.6rem;
-  padding-bottom: 2rem;
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
 }
 
 @media screen and (max-width: 750px) {
