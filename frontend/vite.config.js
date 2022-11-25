@@ -13,4 +13,14 @@ export default defineConfig({
       "@services": path.resolve(__dirname, "src/services"),
     },
   },
+    build: {
+    rollupOptions: {
+      external: [
+        "react-snowfall","react-webcam","react-icons/bs","react-icons/bi","react-component-export-image"
+      ],
+    },
+  },
+  optimizeDeps: {
+    include: ["react-snowfall", "react-webcam",,"react-icons/bs","react-icons/bi","react-component-export-image"],
+  },
 });
