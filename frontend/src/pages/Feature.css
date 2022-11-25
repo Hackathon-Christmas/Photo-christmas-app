@@ -3,7 +3,10 @@
 }
 
 .page {
-  background-color: black;
+  background-image: linear-gradient(
+    rgb(35, 29, 43) rgb(32, 30, 43),
+    rgb(25, 26, 36)
+  );
 }
 
 .final-result {
@@ -19,4 +22,11 @@
 .instructions {
   color: white;
   padding: 50px;
+}
+
+.feature-bg {
+  background-image: linear-gradient(
+    rgb(35, 29, 43) rgb(32, 30, 43),
+    rgb(25, 26, 36)
+  );
 }

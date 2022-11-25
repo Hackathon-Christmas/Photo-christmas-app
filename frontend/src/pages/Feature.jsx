@@ -16,7 +16,7 @@ export default function Feature() {
   const [chooseBackground, setChooeseBackground] = useState(null);
   const [isCompleted, setIsCompleted] = useState(null);
   return (
-    <div>
+    <div className="feature-bg">
       <Snowfall style={{ height: "200vh" }} />
       <div className="app-left-side">
         <MoreCardButton whenClicked={setIsLibraryOpen} />
