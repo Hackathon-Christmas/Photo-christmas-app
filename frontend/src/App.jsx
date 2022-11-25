@@ -22,6 +22,7 @@ function App() {
       );
       if (response === true) {
         setRemoveFinal(true);
+        setIsCompleted(false);
       }
     } else {
     }
